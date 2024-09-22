@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html>
+    <body style="background: linear-gradient(0deg, #020a0f, #044369 50%) ;
+    height: 100%;">
+    <!-- html, body{
+  background: linear-gradient(0deg, white, blue 80%) ;
+    height: 100%;
+}-->
+    <!--body style="background-color:black;"-->
+    <!--p class="flex0text1" id="test4"style=" font-size: 20px; color : white;text-align: center;font-family: Arial;height:50%;">proba2
+    </p-->
+    <script src="Chart.js"></script>
+    <script>
+        var donut=40;
+    </script>
+<!--script>
+    document.addEventListener("contextmenu", e => e.preventDefault(), false);
+</script-->
+    <!--script onload="chart1()"-->
+    <script>
+        // chart1();
+ /*
+       function chart1(){ 
+
+
+      var a2;
+      a2=donut;
+ //     document.getElementById("test4").innerHTML = donut;
+document.getElementById("test4").innerHTML = a2;
+};
+*/
+    </script>
+
+    <style>
+        .flex0text {
+            color: #FFFFFF;
+            font-size: 2em;
+        }
+
+        .flex_container {
+            display: flex;
+
+            height: 88vh;
+            /*  height1   */
+            border-bottom: none;
+            /*  border-style: solid;   */
+            /*  border-width: 4px;   */
+            /* border-color: white;   */
+            /*  border-bottom: none;   */
+            /*  border-top: none;   */
+            /*  border-left: none;  */
+            /* border-right: none; */
+            gap: 1%;
+            /*  background-color: #034269;  */
+            background: linear-gradient(0deg, #043c5e, #02324f 80%)
+        }
+
+        .flex_container>div {
+            background-color: #034269;
+            color: white;
+
+            /*  width: 33%;  */
+
+            align-items: center;
+            text-align: center;
+            font-size: 1em;
+            /*  border-style: solid;  */
+            /*  border-width: 4px;  */
+            /*  border-color: #034269;  */
+            /*   border-bottom: none;
+      border-right: none;
+      border-left: none;
+      gap: 1%;  
+        */
+        }
+
+        /*   new 1*/
+        .flex_container_div1_flinf0 {
+            /* border-style: solid;   
+/*  border-width: 4px;   */
+            /*  border-color: white;  */
+            height: 60vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: top;
+            flex-direction: column;
+
+            text-align: center;
+
+            align-items: top;
+            /*    border-top: none;   */
+            /*      border-right: none;    */
+            /*    border-left: none;    */
+            box-shadow: 0 0 10px 5px black;
+        }
+
+        .flex-container_div1_finf0_text1 {
+            font-size: 1em;
+        }
+
+        .flex-container_div1_flinf1 {
+
+            border-style: solid;
+            border-width: 4px;
+            border-color: #034269;
+            height: 23vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            text-align: center;
+
+            align-items: center;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+
+        }
+
+        /*
+.flex_container_div1_finf1_text1 {
+ font-size: 0.5em;}
+ .flex_container_div1_finf1_text2 {
+ font-size: 2em;}
+*/
+        /*    new1 end   */
+
+        .flexa {
+            border-style: solid;
+            border-width: 4px;
+            border-color: #034269;
+        }
+
+        .flex_prod {
+            border-style: solid;
+            border-width: 4px;
+            border-color: #034269;
+            height: 29vh;
+            /*  height1   */
+            border-bottom: none;
+            /* border-right: none;  */
+            background-color: #034269;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .flex-prod_text1 {
+            font-size: 4em;
+            color: white;
+        }
+
+        .flex1 {
+            display: flex;
+
+            background-color: #f1f1f1;
+
+            height: 30vh;
+            /*  height1   */
+            border-style: solid;
+            border-width: 4px;
+            border-color: #034269;
+            /* border-bottom: none;   */
+            /* border-top: none;  */
+            border-left: none;
+            /* border-right: none; */
+        }
+
+        .flex1>div {
+            background-color: #034269;
+            color: #034269;
+
+            width: 25%;
+
+
+            text-align: center;
+
+            font-size: 1em;
+            border-style: solid;
+            border-width: 4px;
+            border-color: black;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+
+        .flinf0 {
+            border-style: solid;
+            /*   border-width: 4px;    */
+            /*     border-color: white;   */
+            height: 5vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            text-align: center;
+
+            align-items: center;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        .finf0_text1 {
+            font-size: 1em;
+        }
+
+        .flinf1 {
+
+            border-style: solid;
+            border-width: 4px;
+            border-color: black;
+            height: 23vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            text-align: center;
+
+            align-items: center;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+        }
+
+        .finf1_text1 {
+            font-size: 1em;
+            /* font-size: 1.875em;  */
+        }
+    </style>
+    </head>
+    <!--body style=" background-color: #E6E6FA;"-->
+
+    <body style=" background-color: black;">
+
+        <!--h1>Flexible Items</h1-->
+        <style>
+            .flex0 {
+                border-style: solid;
+                /*     border-width: 4px;   */
+                /*    border-color: white;   */
+                height: 10vh;
+                /*  height1   */
+                border-bottom: none;
+                /* border-right: none;  */
+                border-top: none;
+
+
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: #034269;
+            }
+
+            .flex_container_flinf1 {
+                /*  background-color: #034269;   */
+                /*034269  */
+                background-color: #034269;
+
+            }
+        </style>
+        <div class="flex0">
+            <!--p class="flex0text" >Shaft Preassembly</p-->
+            <div class="1_0" style=" width:100%;height:100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+      border-style: solid;
+             border-width: 3px;   
+            border-color:#02324f;  
+        height: 10vh;
+ 
+        border-bottom: none;
+      
+        background-color: #02324f;
+  
+  ">
+                <div class="1_1" style=" width:4%;height:75%; ">
+                    <!--img src="zf.png"  width="100%" height="100%"-->
+                </div>
+                <div class="1_1_1_5" id="test3" style=" width:15%;height:100%;font-size: 280%;font-family: Arial;font-weight:bold;color : white;   
+                      display: flex;            align-items: center;       justify-content: center; ">Shaft
+                </div>
+                <div class="space22" style=" width:23%;height:60%; ""></div>
+
+        <!--div class=" 1_1_1"style=" border: 1px solid red;width:20%;height:100%;  ;align-items: bottom; " -->
+
+
+                    <!--p class="flex0text1"style=" font-size: 2em; color : white;text-align: center;font-family: Arial" >Shaft Preassembly</p-->
+
+
+
+                    <!--/div-->
+                    <div class="1_2" style=" width:20%;height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;">
+                        <div class="1_1_1_b" style=" width:100%;height:100%;   display: flex; align-items: center;
+                                justify-content: center; flex-direction: column;">
+                            <div class="1_1_1_a" style=" width:100%;height:100%;   display: flex; align-items: center;
+                    justify-content: center; flex-direction: row;">
+                                <div class="1_1_6" id="1_1_6" style=" width:100%;height:100%;font-size: 150%;font-family: Arial;font-weight:bold;color : white;   
+                    display: flex;            align-items: center;       justify-content: center; ">12:56
+                                </div>
+                                <div class="1_1_7" id="1_1_7" style=" width:100%;height:100%;font-size: 150%;font-family: Arial;font-weight:bold;color : white;   
+                      display: flex;            align-items: center;       justify-content: center; ">16.08.2023
+                                </div>
+                            </div>
+                            <div class="1_1_6_1" id="1_1_6_1" style=" width:100%;height:300%;font-size: 250%;font-family: Arial;font-weight:bold;color : white;   
+                                display: flex;            align-items: center;       justify-content: center; ">Shift
+                                <p id="demo">JavaScript can change HTML content.</p>
+                                <p id="a1">JavaScript can change HTML content.</p>
+                            </div>
+                        </div>
+                        <!--div class="1_1_2_1"style=" border: 1px solid red;width:100%;height:100%;align-items: top;">
+                        <p class="flex0text1"style=" font-size: 20px; color : white;text-align: center;font-family: Arial;height:50%;" >Shift 1</p> 
+                      </div-->
+                        <!--div class="1_1_3" style=" width:100%;height:100%;font-size: 100%;font-family: Arial;font-weight:bold;color : white;   
+                      display: flex;            align-items: center;       justify-content: center; ">Shift1
+            </div-->
+
+                    </div>
+
+                    <!--div class="1_1_3"style=" border: 1px solid red;width:30%;height:100%; display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;">
+
+              <p class="flex0text1"style=" font-size: 20px; color : white;text-align: center;font-family: Arial;height:30%;" >Product Type  </p> 
+              <p class="flex0text1"style=" font-size: 20px; color : #034269;text-align: center;font-family: Arial;height:30%;" >. </p> 
+              <p class="flex0text1"style=" font-size: 20px; color : white;text-align: center;font-family: Arial;height:30%;" >  Rotor</p> 
+            </div>
+            
+            </div-->
+                    <div class="space22" id="proc" style=" width:15%;height:60%; ""></div>
+
+        <div class=" 1_1_1" style=" width:20%;height:100%;font-size: 180%;font-family: Arial;font-weight:bold;color : white;   
+            display: flex;            align-items: center;       justify-content: center; ">Product type Shaft
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flex_container">
+                <div class="test1" style="max-width:1%"></div>
+                <!-- new 1-->
+                <style>
+                    .flex_container_basic {
+                        gap: 1%;
+                        min-width: 26%;
+                        max-width: 28%;
+                        height: 80vh;
+                    }
+                </style>
+                <div class="flex_container_basic">
+                    <div class="flex_container_div1_flinf0">
+                        <div style="width:100%;height:85%;">
+                            <!--p class="flex_container_div1_finf0_text1" id="flex_container_div1_finf0_text1"style=" font-size: 2em; color : white;text-align: center;font-family: Arial" >OEE</p-->
+                            <div class="1_1_4" id="oee" style="width:100%;height:20%;font-size: 280%;font-family: Arial;font-weight:bold;color : #1DE2EB;   
+     display: flex;            align-items: center;       justify-content: center; ">OEE
+                            </div>
+                            <!-- OLD DONUT START-->
+                            <!--canvas id="myChart" style="width: 241px; display: block; height: 120px; width:400;height:312" class="chartjs-render-monitor"></canvas>
+
+     <script>
+     var xValues = ["Italy", "France", "Spain", "USA"];
+     var yValues = [55, 49, 44, 24];
+     var barColors = [
+       "#b91d47",
+       "#00aba9",
+       "#2b5797",
+       "#e8c3b9",
+       "#1e7145"
+     ];
+     
+     new Chart("myChart", {
+       type: "doughnut",
+       data: {
+      //   labels: xValues,
+         datasets: [{
+           backgroundColor: barColors,
+           data: yValues
+         }]
+       },
+       options: {
+         title: {
+           display: true,
+       
+         }
+       }
+     });
+     </script-->
+                            <!-- OLD DONUT END-->
+
+                            <!-- NEW DONUT START-->
+                            <canvas id="myChart" style="width:80%; height:55%"></canvas>
+                            <!--canvas id="gx_150s_658Ed8745321" width="250" height="150"></canvas-->
+                            <script>
+                                 chart1();
+                                 donut=20;
+                                function chart1(){
+              //cc
+              var a1;
+              a1=donut;
+            var data = {
+        //  labels: ["Blue","Red"],
+          datasets: [
+            {
+              data: [a1, 100-a1],
+          //    backgroundColor: ["#1eb343","#36A2EB"],
+          backgroundColor: ["#1eb343","#0A202F"],
+            }]
+        };
+        
+        Chart.pluginService.register({
+          beforeDraw: function(chart) {
+            var width = chart.chart.width,
+                height = chart.chart.height,
+                ctx = chart.chart.ctx,
+                type = chart.config.type;
+        
+            if (type == 'doughnut')
+            {
+              var percent = Math.round((chart.config.data.datasets[0].data[0] * 100) /
+                            (chart.config.data.datasets[0].data[0] +
+                            chart.config.data.datasets[0].data[1]));
+              var oldFill = ctx.fillStyle;
+              var fontSize = ((height - chart.chartArea.top) / 60).toFixed(2);
+        //      var fontSize = ((height - chart.chartArea.top) / 100).toFixed(2);
+              
+              ctx.restore();
+       //      ctx.font = fontSize + "em sans-serif";    //staro
+        ctx.font = "bold 100px arial";
+         
+         //  ctx.font =  "arial bold" + fontSize ;
+      //  ctx.font = fontSize + "em arial";
+ //   ctx.font = "bold 100px arial";  //  novo ok
+    //    ctx.font = "bold"+ fontSize +"arial";
+              ctx.textBaseline = "middle"
+        
+              var text = percent + "%",
+                  textX = Math.round((width - ctx.measureText(text).width) / 2),
+                  textY = (height + chart.chartArea.top) / 2;
+              
+            //  ctx.fillStyle = chart.config.data.datasets[0].backgroundColor[0];
+            ctx.fillStyle ="white";
+              ctx.fillText(text, textX, textY);
+              ctx.fillStyle = oldFill;
+              ctx.save();
+            }
+          }
+        });
+        
+        var myChart = new Chart(document.getElementById('myChart'), {
+          type: 'doughnut',
+          data: data,
+          options: {
+            cutoutPercentage:94,
+         //   percentageInnerCutout : 90,
+      //    cutoutInnerPercentage:80,
+            animation: {
+            duration: 0
+            },
+              elements: {
+              arc: {
+              borderWidth: 0
+              }
+              },
+            responsive: true,
+            legend: {
+              display: false
+            }
+          }
+        });
+            };
+                            </script>
+                            <!-- NEW DONUT END-->
+                        </div>
+                    </div>
+
+                    <style>
+                        .space {
+                            background-color: #034269;
+                            display: flex;
+                            box-shadow: inset 0 8px 10px -7px #000000;
+                            padding: 0.8%;
+                            height: 1%;
+                        }
+                    </style>
+                    <div class="space"></div>
+
+                    <div class="flex_container_flinf1">
+                        <style>
+
+                        </style>
+                        <!--p class="flex_container_div1_finf1_text1" id="flex_container_div1_finf1_text1">flex_container_div1_finf1_text1</p-->
+                        <!--p class="flex_container_div1_finf1_text2" id="flex_container_div1_finf1_text2">OEE4</p-->
+
+                        <!-- FLEX GRANANJE VAZNO  ZA SABLON-->
+                        <style>
+                            .fl_co2_D1_D {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                background-color: #034269;
+                                height: 22vh;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: row;
+                                box-shadow: 0 0 10px 5px black;
+                            }
+                        </style>
+                        <div class="fl_co2_D1_D">
+                            <style>
+                                .fl_co2_D1_1 {
+                                    border-color: #034269;
+
+                                }
+                            </style>
+                            <div class="fl_co2_D1_4" style=" width:50%;height:70%;display: flex; align-items: center;             
+               flex-direction: column;">
+
+                                <style>
+                                    /*
+  .fl_co2_D1_5 {
+ display: flex;
+ flex-wrap: nowrap;
+background-color: #034269;  
+ height: 30vh; 
+ display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+  box-shadow: 0 0 10px 5px  black; 
+      }
+      */
+                                </style>
+                                <!--div class="fl_co2_D1_5"style=" border: 1px solid red;width:100%;height:100%;">oee5
+                    
+
+                    </div-->
+
+
+                                <!--div class="fl_co2_D1_4_1"style=" border: 1px solid red;width:100%;height:100%;font-size: 180%;font-family: Arial;color:green">-1 Shift</div-->
+                                <div class="1shift" id="1shift" style=" width:100%;height:50%;font-size: 180%;font-family: Arial;color : #1DE2EB;   
+                    display: flex;            align-items: center;       justify-content: center; ">-1 Shift
+                                </div>
+                                <div class="space_1" id="space_1" style=" width:100%;height:50%;font-size: 180%;font-family: Arial;color : #1DE2EB;   
+                     ">
+                                </div>
+                                <!--div class="fl_co2_D1_4"style=" border: 1px solid red;width:100%;height:100%; font-size: 280%;font-family: Arial; font-weight:bold; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;">89%
+                    
+                    </div-->
+
+                                <div class="fl_co2_D1_4_6"
+                                    style=" width:100%;height:100%;font-size: 180%;font-family: Arial;display: flex; flex-direction: row;">
+                                    <!--div class="fl_co2_D1_4_1"style=" width:100%;height:100%;font-family: Arial;"></div-->
+                                    <div class="container11">
+                                        <!--svg id="triangle" viewBox="0 0 30% 30%">
+            	<polygon points="50 15, 100 100, 0 100"/>
+        </svg-->
+                                    </div>
+
+
+                                    <div class="fl_co2_D1_4_6"
+                                        style=" width:100%;height:70%;font-size: 100%;font-family: Arial;font-weight:bold;color : white; display:flex;  flex-direction: row;  ">
+                                        <div class="fl_co2_D1_4_6_8"
+                                            style=" width:20%;height:50%;font-family: Arial;font-weight:bold;color : white;   ">
+                                        </div>
+                                        <div class="fl_co2_D1_4_6_8"
+                                            style=" width:15%;height:80%;font-family: Arial;font-weight:bold;color : white;   ">
+                                            <!--svg id="triangle6" viewBox="10 0 25 25" style="fill:red;">
+                        <!--polygon points="50 15, 100 100, 0 100"/-->
+                                            <!--polygon points="20 40,41 5,  65 40" /-->
+                                            <!--polygon points="15 5, 22 17,  30 5" />
+                      </svg-->
+                                            <svg id="triangle1" viewBox="0 0 30 30" style="fill:#034269;">
+                                                <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                <!--polygon points="16 33,31 12,  43 33"/-->
+                                                <!--bolo je -->
+
+                                                <svg id="triangle21" class="triang21" viewBox="12 2 30 30"
+                                                    style="fill:yellow;">
+                                                    <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                    <polygon points="16 12,31 33,  43 12" />
+                                                </svg>
+                                                <svg id="triangle40" class="triang21" viewBox="12 2 30 30"
+                                                    style="fill:green;">
+                                                    <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                    <polygon points="16 12,31 33,  43 12" />
+                                                </svg>
+                                            </svg>
+                                        </div>
+                                        <div class="fl_co2_D1_4_6"
+                                            style=" width:30%;height:30%;font-size: 170%;font-family: Arial;font-weight:bold;color : white;   ">
+                                            89%
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fl_co2_D1_4_7"
+                                    style=" width:100%;height:100%;font-size: 250%;font-family: Arial;font-weight:bold;color : white;    display: flex;   align-items: center; justify-content: center; ">
+                                    214pcs</div>
+
+                            </div>
+                            <div class="fl_co2_D1_4" style=" width:50%;height:70%;display: flex; align-items: center;             
+               flex-direction: column;">
+                                <!--div class="fl_co2_D1_4_1"style=" border: 1px solid red;width:100%;height:100%;font-size: 180%;font-family: Arial;color:green">-2 Shift</div-->
+                                <div class="2shift" id="2shift" style=" width:100%;height:50%;font-size: 180%;font-family: Arial;color : #1DE2EB;   
+                      display: flex;            align-items: center;       justify-content: center; ">-2 Shift
+                                </div>
+                                <div class="space_1" id="space_1" style=" width:100%;height:50%;font-size: 180%;font-family: Arial;color : #1DE2EB;   
+                                       ">
+                                </div>
+                                <!--div class="fl_co2_D1_4_1"style=" width:100%;height:100%;font-size: 280%;font-family: Arial;">94</div-->
+                                <div class="fl_co2_D1_4_7"
+                                    style=" width:100%;height:60%;font-size: 100%;font-family: Arial;font-weight:bold;color : white; display:flex;  flex-direction: row;  ">
+                                    <div class="fl_co2_D1_4_7_8"
+                                        style=" width:20%;height:30%;font-family: Arial;font-weight:bold;color : white;   ">
+                                    </div>
+                                    <div class="fl_co2_D1_4_7_8"
+                                        style=" width:15%;height:50%;font-family: Arial;font-weight:bold;color : white;   ">
+                                        <!--svg id="triangle5" viewBox="10 0 25 25" style="fill:red;">
+                      <!--polygon points="50 15, 100 100, 0 100"/-->
+                                        <!--polygon points="20 40,41 5,  65 40" /-->
+                                        <!--polygon points="15 5, 22 17,  30 5" />
+                    </svg-->
+                                        <svg id="triangle1" viewBox="0 0 30 30" style="fill:#034269;">
+                                            <!--polygon points="50 15, 100 100, 0 100"/-->
+                                            <!--polygon points="16 33,31 12,  43 33"/-->
+                                            <!--bolo je -->
+
+                                            <svg id="triangle2" class="triang2" viewBox="12 2 30 30"
+                                                style="fill:green;">
+                                                <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                <polygon points="16 12,31 33,  43 12" />
+                                            </svg>
+                                            <svg id="triangle4" class="triang2" viewBox="12 2 30 30"
+                                                style="fill:black;">
+                                                <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                <polygon points="16 12,31 33,  43 12" />
+                                            </svg>
+                                        </svg>
+                                    </div>
+                                    <div class="fl_co2_D1_4_7"
+                                        style=" width:30%;height:30%;font-size: 300%;font-family: Arial;font-weight:bold;color : white;   ">
+                                        89%
+
+                                    </div>
+                                </div>
+
+                                <!--div class="fl_co2_D1_4_1"style=" border: 1px solid red;width:100%;height:100%;font-size: 180%;font-family: Arial;">214pcs</div-->
+                                <div class="fl_co2_D1_4_5" style=" width:100%;height:100%;font-size: 240%;font-family: Arial;font-weight:bold;color : white;   
+                      display: flex;            align-items: center;       justify-content: center; ">224pcs</div>
+
+                            </div>
+                            <!-- FLEX GRANANJE VAZNO  ZA SABLON  KRAJ-->
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- new 1  end-->
+                <style>
+                    .flex_con_div2_flinf0 {
+                        /*  border-style: solid;  */
+                        /*  border-width: 4px;  */
+                        /* border-color: white;  */
+                        height: 42vh;
+                        /*
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        
+            text-align: center;
+         */
+                        align-items: center;
+                        /*    border-top: none;   */
+                        /*      border-right: none;   */
+                        /*  border-left: none;   */
+                        box-shadow: 0 0 10px 3px black;
+
+                    }
+
+                    .flex_cont_div2_finf0_text1 {
+                        font-size: 1em;
+                    }
+
+                    .flex-cont_div2_flinf1 {
+
+                        /*  border-style: solid;   */
+                        /*  border-width: 4px;    */
+                        /* border-color: white;   */
+                        height: 40vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        text-align: center;
+
+                        align-items: center;
+                        /*   border-right: none;   */
+                        /*    border-left: none;   */
+                        /*    border-top: none;  */
+                        box-shadow: 0 0 10px 3px black;
+                    }
+
+                    .flex-cont_div2_finf1_text1 {
+                        font-size: 1em;
+                        /* font-size: 1.875em;  */
+                    }
+                </style>
+                <style>
+                    .flex_con_div2_b {
+                        max-width: 25%;
+                        height: 84vh;
+                        box-shadow: 0 0 10px 1px black;
+                    }
+                </style>
+                <div class="flex_con_div2_b" style=" min-width:25%;">
+
+                    <!--div style=" width:30%;"-->
+                    <div>
+
+                        <div class="flex_con_div2_flinf0">
+                            <!--p class="flex_cont_div2_finf0_text1" id="flex_cont_div2_finf0_text1">flex_cont_div2_finf0_text1</p-->
+                            <div class="fl_4" style=" width:100%;height:10vh;display: flex; align-items: top;             
+     flex-direction: column;">
+                                <div class="fl_co2_D1_4_3_1"
+                                    style=" width:100%;height:100%;font-size: 280%;font-family: Arial;color:#1DE2EB;">
+                                    Pieces</div>
+
+
+                            </div>
+
+
+                            <div class="fl_5_0" style=" width:100%;height:50%; display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;">
+                                <div class="fl_5_1" style=" width:10%;height:100%; "></div>
+                                <div class="fl_5_2" style=" width:10%;height:90%;display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;">
+                                    <div class="container22" style="width:100%;height:30%">
+                                        <svg id="triangle1" viewBox="0 0 30 30" style="fill:#034269;">
+                                            <!--polygon points="50 15, 100 100, 0 100"/-->
+                                            <!--polygon points="16 33,31 12,  43 33"/-->
+                                            <!--bolo je -->
+
+                                            <svg id="triangle2" class="triang2" viewBox="12 2 30 30"
+                                                style="fill:yellow;">
+                                                <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                <polygon points="16 12,31 33,  43 12" />
+                                            </svg>
+                                            <svg id="triangle4" class="triang2" viewBox="12 2 30 30" style="fill:red;">
+                                                <!--polygon points="50 15, 100 100, 0 100"/-->
+                                                <polygon points="16 12,31 33,  43 12" />
+                                            </svg>
+                                        </svg>
+
+
+
+                                    </div>
+                                    <!--div class="fl_5_2_2"style=" border: 1px solid red;width:100%;height:100%;">-3</div-->
+                                    <div class="fl_5_2_2" style=" width:30%;height:50%;font-size: 480%;font-family: Arial;font-weight:bold;color : white;   
+                           display: flex;            align-items: center;       justify-content: center; ">-3
+                                    </div>
+                                </div>
+                                <div class="1_199_space" style=" width:20%;height:100%;font-size: 200%;font-family: Arial;  
+                ">
+                                </div>
+                                <div class="PeacesNr" id="PeacesNr" style=" width:40%;height:100%;font-size: 700%;font-family: Arial;font-weight:bold;color : white;   
+                           display: flex;            align-items: center;       justify-content: center; ">172
+                                </div>
+                                <!--bilo je700 font-size: 200%; -->
+
+                            </div>
+
+                        </div>
+                        <style>
+                            .space1 {
+                                background-color: #034269;
+                                display: flex;
+                                box-shadow: inset 0 8px 10px -7px #000000;
+                                padding: 0.8%;
+                                height: 1vh;
+                            }
+                        </style>
+                        <div class="space1"></div>
+
+
+
+                        <div class="flex-cont_div2_flinf1">
+
+                            <!--PROBA FLEX-->
+                            <div class="8_1" style=" width:100%;height:70%; display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;">
+                                <!--div class="8_1_1"style=" border: 1px solid red;width:30%;height:100%; ">Target</div-->
+                                <div class="8_1_1" id="space222" style=" width:100%;height:100%;font-size: 380%;font-family: Arial;color : #1DE2EB;   
+      display: flex;            align-items: center;       justify-content: center; ">Target
+                                </div>
+                                <div class="space22" style=" width:100%;height:220%;"></div>
+                                <!--div class="8_1_2"style=" border: 1px solid red;width:100%;height:100%;font-size: 380%;font-family: Arial;font-weight:bold;">200</div-->
+                                <div class="8_1_2" style=" width:100%;height:100%;font-size: 680%;font-family: Arial;font-weight:bold;color : white;   
+      display: flex;            align-items: center;       justify-content: center; ">270
+                                </div>
+
+
+
+                                <div class="8_1_2" style=" width:100%;height:50%; display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: row;">
+                                    <div class="8_1_2_1" style=" width:40%;height:100%; "></div>
+                                    <div class="8_1_2_2" style=" width:30%;height:100%;display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;">
+                                        <div class="8_1_3_11" style="display: flex;flex-direction:column;"></div>
+
+                                        <div class="8_1_2_1" style=" width:100%;height:20%; "></div>
+
+                                        <div class="8_1_3_1" style=" width:100%;height:50%;font-size: 180%;font-family: Arial;color : #1DE2EB;   
+                   display: flex;            align-items: center;       justify-content: center; ">Max:
+                                        </div>
+
+
+
+                                        <!--div class="8_1_2_2"style=" width:100%;height:100%;"></div-->
+                                    </div>
+
+                                    <!--div class="8_1_3"style=" border: 1px solid red;width:300%;height:100%;">240</div>
+           
+           </div-->
+                                    <div class="max1" id="max1" style=" width:100%;height:100%;font-size: 280%;font-family: Arial;font-weight:bold;color : white;   
+                   display: flex;            align-items: center;       justify-content: center; ">240
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--PROBA FLEX   END-->
+                            <!--p class="flex-cont_div2_finf1_text1" id="flex-cont_div2_finf1_text1">flex-cont_div2_finf1_text1</p-->
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <style>
+                    .flex_con_div3_flinf0 {
+                        /*  border-style: solid;*/
+                        /*  border-width: 4px;*/
+                        /*  border-color: white;*/
+                        height: 84vh;
+                        /*  max-width: 40%;  */
+                        display: flex;
+                        align-items: center;
+                        justify-content: top;
+                        flex-direction: column;
+
+                        text-align: center;
+
+                        align-items: top;
+                        /*  border-top: none;*/
+                        /*    border-right: none;*/
+                        /*  border-left: none;*/
+                        box-shadow: 0 0 10px 3px black;
+                    }
+
+                    /*
+.flex_cont_div3_finf0_text1 {
+ font-size: 1em;
+}
+*/
+                    .flex_cont_div3_flinf1 {
+
+                        border-style: solid;
+                        border-width: 4px;
+                        border-color: white;
+                        height: 23vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        text-align: center;
+
+                        align-items: center;
+                        border-right: none;
+                        border-left: none;
+                        border-top: none;
+                    }
+
+                    /*
+.flex_cont_div3_finf1_text1 {
+ font-size:1em;   /* font-size: 1.875em;  
+}
+*/
+                </style>
+                <!--div-->
+                <!--div-->
+                <div class="flex_con_div3_flinf0" style="min-width:43%">
+
+                    <!--NEW START-->
+                    <style>
+                        .fl_conn {
+                            height: 50vh;
+                            width: 100%;
+                        }
+                    </style>
+                    <div class="fl_conn">
+
+                        </style>
+                        <div class="fl_co2_D1_3" style=" width:100%;height:50vh;display: flex; align-items: center;             
+            flex-direction: column;">
+
+                            <div class="fl_4" style=" width:100%;height:10vh;display: flex; align-items: center;             
+flex-direction: row;">
+                                <!--div class="fl_4_1"style=" width:100%;height:10vh;">PRODUCTION</div-->
+                                <div class="prod" id="prod" style=" width:100%;height:10vh;font-size: 320%;font-family: Arial;font-weight:bold;color : white;   background-color: red; 
+          display: flex;            align-items: center;       justify-content: center; ">P R O D U C T I O N
+                                </div>
+
+                            </div>
+
+                            <div class="fl_5" style=" width:100%;height:30%;display: flex; align-items: center;             
+     flex-direction: row; ">
+                                <!--div class="fl_5_1"style=" border: 1px solid red;width:100%;height:5vh;">5_1_1</div-->
+
+
+                            </div>
+
+
+                            <div class="fl_6" style=" width:100%;height:20vh;display: flex; align-items: center;             
+                flex-direction: row;">
+                                <div class="fl_co2_D1_4_3_2" id="OP10"
+                                    style=" width:100%;height:90%;font-size: 400%;font-family: Arial;font-weight:bold;background-color: green;">
+                                    OP10</div>
+                                <div class="dist" style=" width:3%;height:100%; "></div>
+                                <div class="fl_co2_D1_4_3_3" id="OP20"
+                                    style=" width:100%;height:90%;font-size: 400%;font-family: Arial;font-weight:bold;background-color: green;">
+                                    OP20</div>
+
+                                <!--div class="fl_co2_D1_4"style=" width:100%;height:100%;">7</div-->
+
+                            </div>
+                            <div class="dist" style=" width:100%;height:2vh; "></div>
+                            <div class="fl_co2_D1_4_1"
+                                style=" width:100%;height:20vh;display: flex; align-items: center;flex-direction: row;">
+                                <div class="fl_co2_D1_4_2" id="OP30"
+                                    style=" width:100%;height:90%;font-size: 400%;font-family: Arial;font-weight:bold;background-color: green;">
+                                    OP30
+                                    <!--p class="flex0text1"style=" font-size: 25px; color : white;text-align: center;font-family: Arial;font-weight:bold;height:100%;width:100%;" >OP30</p-->
+
+                                </div>
+                                <div class="dist" style=" width:3%;height:30%; "></div>
+                                <div class="fl_co2_D1_4_3_4" id="OP40"
+                                    style=" width:100%;height:90%;font-size: 400%;font-family: Arial;font-weight:bold;background-color: green;">
+                                    OP40
+                                    <!--p class="flex0text1"style=" font-size: 100%; color : white;text-align: center;font-family: Arial;font-weight:bold;height:100%;width:100%;" >OP40</p-->
+
+                                </div>
+                                <!--div class="fl_co2_D1_4"style=" width:100%;height:100%;">10</div-->
+                            </div>
+                            <!--div class="fl_6" style=" width:100%;height:1vh; "></div-->
+                            <div class="fl_7"
+                                style=" width:100%;height:20vh;display: flex; align-items: center;flex-direction: row;">
+                                <!--div class="fl_7_1"style=" font-size: 2em; color : white;text-align: center;font-family: Arial; width:100%;background-color: green;">op45</div-->
+
+                                <div class="fl_co2_D1_4_3_3" id="OP45"
+                                    style=" width:100%;height:90%;font-size: 400%;font-family: Arial;font-weight:bold;background-color: green;">
+                                    OP45
+
+                                    <!--p class="flex0text1"style="  width:100%;height:100%;font-size: 380%;font-family: Arial;font-weight:bold;" >OP45</p-->
+                                    <script>
+                                        //  document.getElementById("ee").innerHTML = "New text!";
+                                    </script>
+                                </div>
+                                <div class="fl_6" style=" width:3%;height:100%; "></div>
+                                <div class="fl_7_2" style=" width:100%;height:50%"></div>
+
+                                <!--div class="fl_co2_D1_4"style=" border: 1px solid red;width:100%;height:100%;">7</div-->
+
+                            </div>
+
+
+
+                            <!-- FLEX GRANANJE VAZNO  ZA SABLON  KRAJ-->
+
+                        </div>
+
+                        <!--NEW END-->
+
+
+                        <!--p class="flex_cont_div3_finf0_text1" id="flex_cont_div3_finf0_text1">flex_cont_div3_finf0_text1</p-->
+                    </div>
+                    <!--div class="flex_cont_div3_flinf1"-->
+                    <!--p class="flex_cont_div3_finf1_text1" id="flex_cont_div3_finf1_text1">flex_cont_div3_finf1_text1</p-->
+                    <!--/div-->
+                </div>
+                <!--/div-->
+
+
+                <style>
+                    .flex_con_div4_flinf0 {
+                        border-style: solid;
+                        border-width: 4px;
+                        border-color: white;
+                        height: 5vh;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        text-align: center;
+
+                        align-items: center;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                    }
+
+                    .flex_cont_div4_finf0_text1 {
+                        font-size: 1em;
+                    }
+
+                    .flex_cont_div4_flinf1 {
+
+                        border-style: solid;
+                        /*   border-width: 4px;  */
+                        /*    border-color: white;   */
+                        height: 23vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        text-align: center;
+
+                        align-items: center;
+                        border-right: none;
+                        border-left: none;
+                        border-top: none;
+                    }
+
+                    .flex-cont_div4_finf1_text1 {
+                        font-size: 1em;
+                        /* font-size: 1.875em;  */
+                    }
+                </style>
+                <!--   canvas -->
+                <!-- REQUIRED: Socket.IO is loaded only once for all instances
+                     Without this, you don't get a websocket connection -->
+                <!--script src="../uibuilder/vendor/socket.io/socket.io.js"></script-->
+
+                <!--Vendor Libraries - Load in the right order  -->
+                <!--script src="../uibuilder/vendor/vue/dist/vue.js"></script--> <!-- dev version with component compiler -->
+                <!-- <script src="../uibuilder/vendor/vue/dist/vue.min.js"></script>   prod version with component compiler -->
+                <!-- <script src="../uibuilder/vendor/vue/dist/vue.runtime.min.js"></script>   prod version without component compiler -->
+                <!-- <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script> for older browsers -->
+                <!--script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script-->
+
+                <!-- REQUIRED: Sets up Socket listeners and the msg object -->
+                <!-- <script src="./uibuilderfe.js"></script>   //dev version -->
+                <!--script src="./uibuilderfe.min.js"></script--> <!--    //prod version -->
+                <!-- OPTIONAL: You probably want this. Put your custom code here -->
+                <!--script src="./index.js"></script-->
+                <script> 
+              //   document.getElementById('1_1_6_1').innerHTML="asdfg";         
+                    function myFunction()
+                    {
+                  //  x=document.getElementsByClassName("demo");  // Find the elements
+
+                  document.getElementsByClassName("1_1_6_1").innerText="Hello JavaScript!";
+
+                   //     for(var i = 0; i < x.length; i++){
+                    //    x[i].innerText="Hello JavaScript!";    // Change the content
+                    //    }
+                    
+                    }
+                    
+                    </script>
+                    <script src="/socket.io/socket.io.js"></script>
+                     <script>
+                        var socket = io();
+                    
+                        socket.on('message', function(msg){
+                          console.log(msg);
+                         // document.getElementById("1_1_6_1").innerHTML = msg;
+                         document.getElementById("1_1_6_1").innerHTML = msg[0].num;
+                         console.log("msg.num",msg[0].num);
+                         donut=msg[0].donut;
+                         console.log("donut",msg[0].donut);
+                         chart1();
+
+                         const d = new Date();
+let minutes = d.getMinutes();
+// document.getElementById("demo").innerHTML = minutes;
+console.log("minutes",minutes);
+//let day = d.getDay()
+//console.log("day",day);
+let date = d.getDate();
+console.log("date",date);
+let year = d.getFullYear();
+console.log("year",year);
+let month = d.getMonth();
+console.log("month",month);
+
+let hour = d.getHours();
+console.log("hour",hour);   //1_1_7
+let month_r=month +1;
+document.getElementById("1_1_6").innerHTML = hour+":"+minutes;
+document.getElementById("1_1_7").innerHTML = date+":"+month_r+":"+year;
+
+
+                        });
+                      </script>
+                <script src="test.js"></script>
+
+    </body>
+</html>
