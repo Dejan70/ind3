@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+     /*  background-color: #ffffff;  */
+     background-color: #f5eded;
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+      .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {width: 250px;}
+.button2 {width: 250px;}
+
+    </style>
+    
+     <!--link rel="stylesheet" href="app.css" /-->
+  </head>
+  <body>
+
+
+    <!--script src="js/three.js"></script-->
+	<script src="js/three.min.121.js"></script>
+    <script src="js/CSS3DRenderer.121.js"></script>
+    <!--script src="js/TrackballControls.js"></script-->
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/OrbitControls.118.js"></script>
+    <script src="/public/main_5.js"></script>
+    <!--script src="/textures/cube.glb"></script-->
+    <nav>
+      <ul>
+        <li><!--a href="/">Back</a--></li>
+        <li>
+          <button type="button" class="button button1" style="font-size:300px;"onclick="fun1()">2</button>
+          <button type="button" class="button button2"style="font-size:300px;" onclick="fun2()">3</button>
+          <button id="addBtn1" class="btn btn-sm btn-primary"style="font-size:300px;">4</button>
+          <script>
+            function fun1() {
+             // return p1 * p2;
+            // document.getElementById("a1").innerHTML = "2";
+           //  console.log("7773333333");
+            }
+            function fun2() {
+             // return p1 * p2;
+             document.getElementById("a1").innerHTML = "3";
+            }
+            
+            
+            //document.getElementById("a1").innerHTML = "Hello World";
+            </script>
+            <p  id="a1"style="font-size:150px;">1</p>
+            <!--p>This is a paragraph.</p>
+            <p>This is a paragraph.</p-->
+             
+          <a
+            href="https://github.com/lostways/three-js-wrapper/blob/master/examples/canvas-text.html"
+            >View Code</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <canvas id="canvas">
+
+   
+
+
+
+
+
+
+
+
+
+    </canvas>
+    <h1>The button Element</h1>
+
+<!--button type="button" onclick="alert('Hello world!')">Click Me!</button-->
+
+
+    
+    <script  type="module">
+
+
+
+    </script>
+
+
+  </body>
+</html>

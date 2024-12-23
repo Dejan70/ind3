@@ -41,7 +41,7 @@
     
     <script  type="module">
 
-var block=0;
+
 //import ThreeJSWrapper from "/three-js-wrapper.module.js";
 //import { ThreeJSEntity } from "/three-js-wrapper.module.js";
       var camera, sceneGl, rendererGl, light;
@@ -62,9 +62,7 @@ var block=0;
           1000
         );
     //    camera.position.set(a, b, c);
-    camera.zoom = 10;
-    camera.position.set(0, 0, 10);
-    
+    camera.position.set(0, 0, 110);
     
         sceneGl = new THREE.Scene();
         sceneCss = new THREE.Scene({ alpha: true });
@@ -230,15 +228,14 @@ var loader3 = new THREE.GLTFLoader();
      elemente11.src = "https://www.kurir.rs";  //mali // taj je  !!!!!!!!!!
       //  elemente11.style.width = size_x + "px";
       //  elemente11.style.height = size_y + "px";
-   //   elemente11.style.pointerEvents = "none";
+
         var object11 = new THREE.CSS3DObject(elemente11);
      //   object.position.set(0, 0, 0);//camera.position
      object11.position.set(50, 30, 0);
         object11.scale.x = 0.05;
         object11.scale.y = 0.05;
-     //   object11.style.pointerEvents = "none";
-  //      sceneCss.add(object11); // prvi  ekran
-      //aaa cons
+        sceneCss.add(object11); // prvi  ekran
+      //aaa 
     
 //  ekran za dc1 glatf  start
 
@@ -261,14 +258,14 @@ var loader3 = new THREE.GLTFLoader();
      element.src = "https://naslovi.net/vremenska-prognoza/beograd";  //mali  //"https://www.kurir.rs"   //  drugi_ekran
         element.style.width = size_x + "px";
         element.style.height = size_y + "px";
-        element.style.pointerEvents= "none";  
+
         var object = new THREE.CSS3DObject(element);
      //   object.position.set(0, 0, 0);//camera.position
      object.position.set(20, 0, 0);
         object.scale.x = 0.005;
         object.scale.y = 0.005;
-   //     sceneGl.add(object);
-    
+        sceneGl.add(object);
+        
       //aaa  screen na assembly
       var elemente = document.createElement("iframe");
      //   element.src = "//aframe.io/";
@@ -284,9 +281,7 @@ var loader3 = new THREE.GLTFLoader();
         object1.scale.x = 0.04;
         object1.scale.y = 0.03;
         object1.rotation.set(-0.37, 0, 0);
-     //   sceneCss1.add(object1); // prvi  ekran
-
-
+        sceneCss1.add(object1); // prvi  ekran
       //aaa  
          //aaa  screen na masini
       var elementea = document.createElement("iframe");
@@ -304,7 +299,7 @@ var loader3 = new THREE.GLTFLoader();
         object1a.scale.x = 0.04;
         object1a.scale.y = 0.03;
         object1a.rotation.set(0, Math.PI * 0.50, 0);
-  //      sceneCss1.add(object1a); // prvi  ekran
+        sceneCss1.add(object1a); // prvi  ekran
       //aaa   screen na masini  end
 
         //aaa   screen na masini2  starrt
@@ -320,7 +315,7 @@ var loader3 = new THREE.GLTFLoader();
         object1a1.scale.x = 0.04;
         object1a1.scale.y = 0.03;
         object1a1.rotation.set(0,-Math.PI * 0.50, 0);
-     //   sceneCss1.add(object1a1); // prvi  ekran
+        sceneCss1.add(object1a1); // prvi  ekran
         //aaa   screen na masini2  end
 
 
@@ -331,60 +326,17 @@ var loader3 = new THREE.GLTFLoader();
      //   element.src = "//aframe.io/";
    //  element.src = "https://naslovi.net/vremenska-prognoza/beograd";  //http://localhost:1880/Moon.html
 
-   //  element100.src = "https://naslovi.net/vremenska-prognoza/beograd";
-
-     element100.src = "https://www.kurir.rs";
-
-
+     element100.src = "https://naslovi.net/vremenska-prognoza/beograd";
         element100.style.width = size_x + "px";
         element100.style.height = size_y + "px";
 
         var object100 = new THREE.CSS3DObject(element100);//drugi_mali_ekran
         object100.position.set(0, 0, 0);
-                                                                      //sss
-        object100.scale.x = 0.1;
-        object100.scale.y = 0.1;
+        
+        object100.scale.x = 0.005;
+        object100.scale.y = 0.005;
         sceneCss1.add(object100);
-      //  element.style.pointerEvents= "none";
-
-      if( block==0){
-      element100.style.pointerEvents= "none";}
-      if( block==1){};
-  //      element100.style.pointerEvents= "auto";
-        element100.style.pointerEvents= "none";
-    //    element100.style.pointerEvents= "auto";
-
         //test new end
-
-
- //test new 101
- var element101 = document.createElement("iframe");
-     //   element.src = "//aframe.io/";
-   //  element.src = "https://naslovi.net/vremenska-prognoza/beograd";  //http://localhost:1880/Moon.html
-
-   //  element100.src = "https://naslovi.net/vremenska-prognoza/beograd";
-
-   //  element101.src = "https://www.kurir.rs";
-     element101.src = "http://localhost:1880/index_5.html";
-
-
-        element101.style.width = size_x + "px";
-        element101.style.height = size_y + "px";
-
-        var object101 = new THREE.CSS3DObject(element101);//drugi_mali_ekran
-        object101.position.set(120, 47, 0);
-                                                                      //sss
-        object101.scale.x = 0.05;
-        object101.scale.y = 0.05;
-        sceneCss1.add(object101);
-      //  element.style.pointerEvents= "none";
-      element101.style.pointerEvents= "none";
-        //test new  101 end
-
-
-
-
-
         
    //  proba button  2css
  //  var moonDiv = document.createElement( 'div' );
@@ -461,7 +413,7 @@ var object3 = new THREE.CSS3DObject(element3);
                 //button 4
                 var element4 = document.createElement("button");
       //  const button = makeHtmlCssObject( 'button', 40, 40 );
-element4.textContent = 'ele_4';
+element4.textContent = 'x4 near';
 element4.style.border = '1px solid #444444';
 element4.style.borderRadius = '50%';
 element4.style.fontSize = '10px';
@@ -475,15 +427,15 @@ a=a+1;
 
 n=n+10;
 sceneCss1.position.set(lr, m, n);
-console.log("button  a: ");
+
 a1=m-a;
 a1=0;
 //sceneCss1.position.set(a, b1, c1-100);
-/*
+
 console.log("button  a: "+a+"  b: "+b+"c: "+c);
 console.log("css1    a1: "+a1+"  b1: "+b1+"c1: "+c1);
   console.log("aa");
-*/
+
 })
 
 element4.style.background = '#dedede';
@@ -497,108 +449,6 @@ var object4 = new THREE.CSS3DObject(element4);
         sceneCss1.add(object4);
         //button4 end
 
-
-            //button 4_1//bbbbb
-            var element4_1 = document.createElement("button");
-element4_1.textContent = 'ele_4_1';
-element4_1.style.border = '1px solid #444444';
-element4_1.style.borderRadius = '50%';
-element4_1.style.fontSize = '10px';
-
-element4_1.addEventListener('click', () => {
-
-//n=n+1;
-//sceneCss.position.set(lr, m, n);
-//camera.position.set(100, 50, 100);
-
-//camera.position.set(0,2.5,2.5); // Set position like this
-//camera.position.set(10.100,0); 
-//camera.lookAt(new THREE.Vector3(10,10,10)); // Set look at coordinate like this
-//camera.lookAt(10,10,10); 
-camera.position.set(0,2.5,120.5); // Set position like this
-camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this
-
-
-//rendererCss.render(sceneCss1, camera);
-        
-      //  rendererGl.render(sceneGl, camera);
-
-//a=a+1;
-
-//n=n+10;
-//sceneCss1.position.set(lr, m, n);   OVDE POMERAS SCENU
-//console.log("button  a: ");
-
-//sceneCss1.position.set(a, b1, c1-100);
-/*
-console.log("button  a: "+a+"  b: "+b+"c: "+c);
-console.log("css1    a1: "+a1+"  b1: "+b1+"c1: "+c1);
-  console.log("aa");
-*/
-})
-
-element4_1.style.background = '#dedede';
-//button.position.y = -50;
-//base.add ( button );
-
-var object4_1 = new THREE.CSS3DObject(element4_1);
-        object4_1.position.set(52, 51, 0);
-        object4_1.scale.x = 0.12;
-        object4_1.scale.y = 0.17;
-        sceneCss1.add(object4_1);
-              //button 4_1 end    -------------------------------------------------------------------
-      //button 4_2//bbbbb
-      var element4_2 = document.createElement("button");
-element4_2.textContent = 'ele_4_2';
-element4_2.style.border = '1px solid #444444';
-element4_2.style.borderRadius = '50%';
-element4_2.style.fontSize = '10px';
-element4_2.addEventListener('click', () => {
-//camera.lookAt(10,10,10); 
-camera.position.set(0,2.5,120.5); // Set position like this
-camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this
-console.log("333");
-console.log("block:", block);
-element100.style.pointerEvents= "auto";
-//block=1;
-})
-
-element4_2.style.background = '#dedede';
-//button.position.y = -50;
-//base.add ("" button );
-
-var object4_2 = new THREE.CSS3DObject(element4_2);
-        object4_2.position.set(52, 48.5, 0);
-        object4_2.scale.x = 0.12;
-        object4_2.scale.y = 0.17;
-        sceneCss1.add(object4_2);
-              //button 4_2 end   
-      //button 4_3  start//bbbbb
-      var element4_3 = document.createElement("button");
-element4_3.textContent = 'ele_4_3';
-element4_3.style.border = '1px solid #444444';
-element4_3.style.borderRadius = '50%';
-element4_3.style.fontSize = '10px';
-element4_3.addEventListener('click', () => {
-//camera.lookAt(10,10,10); 
-camera.position.set(0,2.5,120.5); // Set position like this
-camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this
-console.log("333");
-console.log("block:", block);
-element100.style.pointerEvents= "none";
-//block=1;
-})
-
-element4_3.style.background = '#dedede';
-//button.position.y = -50;
-//base.add ("" button );
-
-var object4_3 = new THREE.CSS3DObject(element4_3);
-        object4_3.position.set(52, 46, 0);
-        object4_3.scale.x = 0.12;
-        object4_3.scale.y = 0.17;
-        sceneCss1.add(object4_3);
-              //button 4_3 end  
               //button 5
               var element5 = document.createElement("button");
       //  const button = makeHtmlCssObject( 'button', 40, 40 );
@@ -734,7 +584,7 @@ var object26 = new THREE.CSS3DObject(element26);
         sceneCss1.add(object26);
 
 
-/*
+
               //test 1 new
               var element8 = document.createElement("iframe");
      //   element.src = "//aframe.io/";
@@ -751,14 +601,12 @@ var object26 = new THREE.CSS3DObject(element26);
         object8.scale.y = 0.05;
         sceneCss1.add(object8);
         //test1 new end
-*/
-
 
                  //test 1 new
                  var element9 = document.createElement("iframe");
      //   element.src = "//aframe.io/";
    //  element.src = "https://naslovi.net/vremenska-prognoza/beograd";  //http://localhost:1880/Moon.html
-/*
+
      element9.src = "https://www.kurir.rs";
         element9.style.width = size_x + "px";
         element9.style.height = size_y + "px";
@@ -772,7 +620,6 @@ var object26 = new THREE.CSS3DObject(element26);
         //test1 new end
 
          //test 2 new
-         */
               var element10 = document.createElement("iframe");
 
         //new 12
@@ -871,14 +718,13 @@ var mesh2 = new THREE.Mesh(geometry, material);
         // rendererGl.domElement.style.zIndex = 1;
         rendererGl.domElement.style.top = 0;
         // this did the trick!
-        rendererGl.domElement.style.pointerEvents = "none";   // ekrani aktivni   ********
+        rendererGl.domElement.style.pointerEvents = "none";
         // also this helped:
         // http://www.hudault.de/3d-interaktive-webseite-mit-slider-in-threejs-webgl-scene
 
         rendererCss.domElement.appendChild(rendererGl.domElement);
         document.body.appendChild(rendererCss.domElement);
         const controls = new THREE.OrbitControls( camera, rendererCss.domElement);
-   //     controls.enableDamping=true;
       //  sceneCss1.add(object27);
         //proba text geomety  new start  OK RADI
         //---------------------------
@@ -1091,7 +937,7 @@ textGeo.computeBoundingBox();
         rendererCss.render(sceneCss1, camera);
         
         rendererGl.render(sceneGl, camera);
-   //     rendererCss.clearDepth();
+        rendererCss.clearDepth();
       }
     </script>
 

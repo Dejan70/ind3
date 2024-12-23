@@ -78,16 +78,126 @@ setInterval( function() {
 
 
 
+//*********   SQLITE */
+//onst express = require('express');
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('./zf.db', (err) => {
+  if (err) { console.error(err.message); }
+  console.log('Connected to the zf.db database.');});
+/*
+
+  //  **************odredjeni podatak get *********************
+db.serialize(() => {
+
+//db.run(`INSERT INTO ping(name,password) VALUES('123','abc')`, (err) => {
+ //     if (err) { console.log(err); throw err;}});
+ 
+ // db.each(`SELECT * FROM ping where number=10`, (err, row) => {if (err) {  console.log(err);throw err; };  console.log(row);z10=row.name;z10_num=row.number});
+ // db.each(`SELECT * FROM ping where number=11`, (err, row) => {if (err) {  console.log(err);throw err; };  console.log(row);z11=row.name;z11_num=row.number});
+  db.each(`SELECT * FROM ping where number=12`, (err, row) => {if (err) {  console.log(err);throw err; };  console.log(row);z12=row.name;z12_num=row.number});
+
+});
+
+*/
+
+/*
+//          **************UPDATE***************** *
+//  let sql = `UPDATE ping SET name= ?,layout=? WHERE number = ?`; 
+//let sql = `UPDATE ping SET name= ? WHERE number = 1`; //******samo 1 update
+
+let sql = `UPDATE ping SET name= ?,layout=? WHERE number = 2`; //******2 update
+var ge="a";
+var ge1="b";
+var ge2="c";
+
+//db.get(sql, [ge,ge1,ge2], (err, row) => {
+//  db.get(sql,ge2, (err, row) => {  //*******samo 1 update
+
+    db.get(sql,[ge1,ge2], (err, row) => {     //*******2 update
+if (err) {
+throw err;
+}
+console.log("done");
+});
+*/
+
+//******************* INSERT**********************
+
+ //   ****1******
+
+ 
+  var ge="ama";
+  var ge1="baba";
+  var ge2="c";
+  db.run('INSERT INTO ping(number, name) VALUES(?, ?)', [ge,ge1], (err) => {
 
 
+
+
+  if(err) {
+		return console.log(err.message); 
+	}
+	console.log('Row was added to the table: ${this.lastID}');
+})
+
+//********************insert end */
+
+
+//******************* Delete where**********************
+let sql = `DELETE FROM ping  WHERE number =? `;
+
+db.get(sql,8, (err, row) => {     //*******2 update
+  if (err) {
+  throw err;
+  }
+  console.log("done");
+  });
+  //******************* Delete wherer end**********************
+//*********   SQLITE END*/
+
+//cam  
+const HTTP_PORT = 1880;
+//require('child_process').fork('some_code.js');  //   call stream
+//require('child_process').fork('express-app.js'); 
+let app    = require('express')();
+let server = app.listen(HTTP_PORT);
+let io     = require('socket.io')(server);
+
+  
+const MjpegProxy = require('mjpeg-proxy').MjpegProxy;
+const express = require('express');
+const errorHandler = require('errorhandler');
+const morgan = require('morgan');
+//
+
+//const cam1 = "http://192.168.2.31/videostream.cgi?user=admin&pwd=admin";
+const cam1 = "http://192.168.1.14:8003/?action=stream";
+
+//const cam2 = "http://192.168.2.30/videostream.cgi?user=admin&pwd=admin";
+const cam2 = "http://192.168.1.14:8004/?action=stream";
+
+//var app = express();
+app.use(errorHandler({ dumpExceptions: true, showStack: true }));
+app.use(morgan('tiny'));
+app.set("view options", { layout: false });
+//app.use(express.static(__dirname + '/public'));
+
+app.get('/index1.jpg', new MjpegProxy(cam1).proxyRequest);
+app.get('/index2.jpg', new MjpegProxy(cam2).proxyRequest);
+
+//app.listen(HTTP_PORT);
+
+console.log("Listening on port " + HTTP_PORT);
+
+/// cam end
 
 //const port = 80;  //digital ocean
-const port = 1880;  //OliMih
+//const HTTP_PORT = 1880;  //OliMih
 
 
-let app    = require('express')();
-let server = app.listen(port);
-let io     = require('socket.io')(server);
+//let app    = require('express')();
+//let server = app.listen(HTTP_PORT);
+//let io     = require('socket.io')(server);
 /*
 var app = require('express')();
 var http = require('http').Server(app);
@@ -190,25 +300,130 @@ const snd1=[
   }, 1000);
 //soc 2 end
 
-  const express = require('express');
+ // const express = require('express');
 //iz  const app = express();
 app.use(express.json());
 app.use(express.static(__dirname +"/public"));
 //app.use(express.static(__dirname +'/index.html'));
 
-app.post('/save',(req,res) => {
+app.post('/save',(req,res) => {        /////************************BUTTON1 */
   snd1[0].name0="777";
     let msg = req.body.msg;
-    console.log("test:",Api.bb)
+    console.log("msg:",msg);
+
+
+    //******date */
+    const d = new Date();
+    console.log("date_:",d);
+    let year=d.getFullYear();let month = d.getMonth();var date=d.getDate();var hour =d.getHours(); var min =d.getMinutes();var sec = d.getSeconds();var msec =d.getMilliseconds();
+  //  console.log("year :",year);console.log("date :",date);  console.log("hour :",hour); console.log("min :",min); console.log("sec :",sec);console.log("msec :",msec);
+//let tmst=querystring.stringify(year+":"+month+":"+date+":"+hour+":"+min+":"+sec+":"+msec);
+//let tmst=year+":"+month+":"+date+":"+hour+":"+min+":"+sec+":"+msec;
+const months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];//const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+let month_1 = months[d.getMonth()];
+console.log("month_1 :",month_1);
+//let tmst=year+":"+month_1+":"+date+"-"+hour+":"+min+":"+sec+":"+msec;
+let tmst=year+":"+month_1+":"+date+"-"+hour+":"+min+":"+sec;
+let tmiso=year+"-"+month+"-"+date+" "+hour+":"+min;
+
+//let tmst=year+":"+month+":"+date+":"+hour+":"+min+":"+sec+":"+msec);
+console.log("tmst :",tmst);
+console.log("tmiso :",tmiso);
+
+    //******************* INSERT**********************
+ // var ge="a";
+ var ge=msg;
+  var ge1=tmiso;
+  var ge2="c";
+  db.run('INSERT INTO ping(number, name) VALUES(?, ?)', [ge,ge1], (err) => {
+
+  if(err) {
+		return console.log(err.message); 
+	}
+	console.log('Row was added to the table: ${this.lastID}');
+})
+
+//********************insert end */
+
+ //  console.log("test:",Api.bb)
+ console.log("b_1");
     res.send("Sve ok1");
     
             })
+ var arr = [0, 1];
 
-app.post('/sav',(req,res) => {
-    let msg = req.body.msg;
-    snd1[0].name0="333";
+app.post('/sav',(req,res) => {             //////////*********BUTTON2 */
+  //  let msg = req.body.msg;
+ //   snd1[0].name0="333";
+ arr = [0];
+ let i=0;
+ db.all(`SELECT * FROM ping where number=12`, (err, row) => {if (err) {
+    console.log(err);   throw err; }; 
+    const numRows = row.length;
+    i=i+1;
+    arr.push(i+1);
+    try{arr[i]=row;}
+    catch{
+      console.log("upis");
+    }
+    for (let ii = 0; ii < numRows; ii++) {
+        if (ii === numRows - 1) {
+            // Last row...
+             console.log("arr:",arr);
+            console.log("ii:",ii);
+        }    
+    }
+    
+   
+    console.log("i:",i);
+   
+  //  console.log(arr); // [0, 1, 2, 3, 4]
+ 
+   
+   
+  //  console.log("row",row);z12=row.name;
+   // z12_num=row.number
+  });
+    console.log("arr:",arr);
+ console.log("b_2");
     res.send("Sve ok2");
              })
+
+
+app.post('/date',(req,res) => {             //////////*********DATE */
+              let msg = req.body.msg;
+           //   snd1[0].name0="333";
+           console.log("date");
+           console.log("date_server:",msg);
+              res.send("Sve ok2");
+                       })
+
+app.post('/date_1',(req,res) => {             //////////*********DATE */
+                        let msg = req.body.msg;
+                     //   snd1[0].name0="333";
+                     console.log("date_1");
+                     console.log("date_1-msg[1]: ",msg[1]);
+                     var x=msg[1];
+                     console.log("x :",x);
+                     x = x.replace("T", " ");
+                     console.log("x_after :",x);
+
+                     console.log("date_1_server:",msg);
+                     var ge=msg;
+                     var ge1=msg[1];
+                     var ge2="c";
+                     db.run('INSERT INTO ping(number, name) VALUES(?, ?)', [ge,ge1], (err) => {
+                   
+                     if(err) {
+                       return console.log(err.message); 
+                     }
+                     console.log('Row was added to the table: ${this.lastID}');
+                   })              
+                        res.send("Sve ok2");
+                                 })             
+
+
              console.log('listening to port 1880-server');
 
                         

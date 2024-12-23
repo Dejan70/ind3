@@ -62,9 +62,7 @@ var block=0;
           1000
         );
     //    camera.position.set(a, b, c);
-    camera.zoom = 10;
-    camera.position.set(0, 0, 10);
-    
+    camera.position.set(0, 0, 100);
     
         sceneGl = new THREE.Scene();
         sceneCss = new THREE.Scene({ alpha: true });
@@ -378,7 +376,7 @@ var loader3 = new THREE.GLTFLoader();
         object101.scale.y = 0.05;
         sceneCss1.add(object101);
       //  element.style.pointerEvents= "none";
-      element101.style.pointerEvents= "none";
+    //  element101.style.pointerEvents= "none";
         //test new  101 end
 
 
@@ -573,32 +571,7 @@ var object4_2 = new THREE.CSS3DObject(element4_2);
         object4_2.scale.y = 0.17;
         sceneCss1.add(object4_2);
               //button 4_2 end   
-      //button 4_3  start//bbbbb
-      var element4_3 = document.createElement("button");
-element4_3.textContent = 'ele_4_3';
-element4_3.style.border = '1px solid #444444';
-element4_3.style.borderRadius = '50%';
-element4_3.style.fontSize = '10px';
-element4_3.addEventListener('click', () => {
-//camera.lookAt(10,10,10); 
-camera.position.set(0,2.5,120.5); // Set position like this
-camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this
-console.log("333");
-console.log("block:", block);
-element100.style.pointerEvents= "none";
-//block=1;
-})
 
-element4_3.style.background = '#dedede';
-//button.position.y = -50;
-//base.add ("" button );
-
-var object4_3 = new THREE.CSS3DObject(element4_3);
-        object4_3.position.set(52, 46, 0);
-        object4_3.scale.x = 0.12;
-        object4_3.scale.y = 0.17;
-        sceneCss1.add(object4_3);
-              //button 4_3 end  
               //button 5
               var element5 = document.createElement("button");
       //  const button = makeHtmlCssObject( 'button', 40, 40 );
