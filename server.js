@@ -156,7 +156,9 @@ db.get(sql,8, (err, row) => {     //*******2 update
 //*********   SQLITE END*/
 
 //cam  
-const HTTP_PORT = 1880;
+//const HTTP_PORT = 1880; //OliMih
+//const port = 80;  //digital ocean
+const HTTP_PORT = 80;  //digital ocean
 //require('child_process').fork('some_code.js');  //   call stream
 //require('child_process').fork('express-app.js'); 
 let app    = require('express')();
